@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="tinyrose.png">
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&amp;display=swap" rel="stylesheet">
+    <title>the sticker book</title>
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/nature/nat-7/nat698.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2009/04/26/madagascar-giant-day-gecko.html" target="_blank" title="Madagascar giant day gecko"><img src="../cur.cursors-4u.net/cursor.png" border="0" alt="Madagascar giant day gecko" style="position:absolute; top: 0px; right: 0px;" /></a>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript">
+// <![CDATA[
+var speed=33; // lower number for faster
+var drops=100; // number of 'drops'
+var colour="#999"; // colour of drops (generally grey!)
+
+/***************************\
+*   Rainy Afternoon Effect  *
+*(c)2011-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+
+var flks=new Array();
+var flkx=new Array();
+var flky=new Array();
+var fldy=new Array();
+var swide, shigh, boddie;
+var ie_version=(navigator.appVersion.indexOf("MSIE")!=-1)?parseFloat(navigator.appVersion.split("MSIE")[1]):false;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(storm);
+
+function storm() { if (document.getElementById) {
+  var r1, r2;
+  boddie=document.createElement("div");
+  boddie.style.position="fixed";
+  boddie.style.top="0px";
+  boddie.style.left="0px";
+  boddie.style.width="1px";
+  boddie.style.height="1px";
+  boddie.style.overflow="visible";
+  boddie.style.backgroundColor="transparent";
+  document.body.appendChild(boddie);
+  set_width();
+  for (var i=0; i<drops; i++) {
+    flks[i]=createDiv(16, 2, "transparent");
+    r1=createDiv(6, 2, colour);
+    r1.style.top="10px";
+    r1.style.left="0px";
+    flks[i].appendChild(r1);
+    r2=createDiv(10, 2, colour);
+    r2.style.top="0px";
+    r2.style.left="0px";
+    if (ie_version && ie_version<10) r2.style.filter="alpha(opacity=25)";
+    else r2.style.opacity=0.25;
+    flks[i].appendChild(r2);
+    flkx[i]=2*Math.floor(Math.random()*swide/2);
+    flky[i]=Math.floor(Math.random()*shigh);
+    fldy[i]=2+Math.floor(Math.random()*4);
+    flks[i].style.left=flkx[i]+"px";
+    flks[i].style.top=flky[i]+"px";
+    boddie.appendChild(flks[i]);
+  }
+  setInterval("cats_and_dogs()", speed);
+}}
+
+function createDiv(height, width, colour) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    sw_min=document.documentElement.clientWidth;
+    sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min-2;
+  shigh=sh_min;
+}
+
+function cats_and_dogs(c) {
+  var i, x, o=0;
+  for (i=0; i<drops; i++) {
+    flky[i]+=fldy[i];
+    if (flky[i]>=shigh-16) {
+	  flky[i]=-16;
+	  fldy[i]=2+Math.floor(Math.random()*4);
+	  flkx[i]=2*Math.floor(Math.random()*swide/2);
+	  flks[i].style.left=flkx[i]+"px";
+	}
+	flks[i].style.top=flky[i]+"px";
+  }
+}
+// ]]>
+</script>
+  </head>
+    <style>
+  body {
+  color: white;
+  font-family: "Short Stack";
+  text-align: center;
+  background-image: url("../sadgrl.online/images/bgs/tile/dra212.html");
+}
+</style>
+  <body>
+<h1>welcome to my virtual sticker collection :D!</h1>
+<p><a href="index-2.html">Home</a></p>
+<p><img src="../64.media.tumblr.com/027a0654cac846243d3087605d639e71/9eb238794989b91f-0c/s640x960/tumblr_027a0654cac846243d3087605d639e71_5776a8f3_640.png" width=10% height=10%>
+<img src="../64.media.tumblr.com/c572b4b0ec1cb5cb2e85a7debafb29a8/99eb52f523649188-15/s250x400/tumblr_c572b4b0ec1cb5cb2e85a7debafb29a8_e1516806_250.png">
+<img src="../64.media.tumblr.com/83cfc5e4d0cbd025bedcb05064f879fa/99eb52f523649188-9c/s250x400/tumblr_83cfc5e4d0cbd025bedcb05064f879fa_b4ea72c8_250.png">
+<img src="../64.media.tumblr.com/11075df44c2c3a6b91cd7c890e81ffa4/tumblr_prm9txQfc41xnhwaco6_400.png" width=10% height=10%>
+<img src="../64.media.tumblr.com/99457f7056be4c8b7d7548dee11c9a2d/tumblr_prm9txQfc41xnhwaco2_400.png" width=10% height=10%>
+<img src="../64.media.tumblr.com/ebb8ef1f4e6cb8dc745bffaa3156a882/43dcc141969f57c6-61/s1280x1920/tumblr_ebb8ef1f4e6cb8dc745bffaa3156a882_c077483d_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/a5de66d835e2c4d7460d8e227c60ec03/e3fb4c56395f36b3-b2/s640x960/tumblr_a5de66d835e2c4d7460d8e227c60ec03_6648f649_640.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/cfc7f14a3639592effb1829d93a35d88/a77ff06a3ec81ab2-65/s500x750/tumblr_cfc7f14a3639592effb1829d93a35d88_2c8cf353_500.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/6c8b7d94b346404581874c093b652b57/8d02c705bbc71625-29/s1280x1920/tumblr_6c8b7d94b346404581874c093b652b57_e2f3abc0_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/0453313ad0cc15ff42057d19035e7cb6/8d02c705bbc71625-03/s1280x1920/tumblr_0453313ad0cc15ff42057d19035e7cb6_24c46cd1_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/ceaa2702edf64661c08b145988d4626b/4713db63668e0d03-4b/s1280x1920/tumblr_ceaa2702edf64661c08b145988d4626b_f05aee5a_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/8125a40c738153de4a9a9de8e338ec8b/5ff47b11f4a6e1d6-d2/s1280x1920/tumblr_8125a40c738153de4a9a9de8e338ec8b_5c2d84f1_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/f19949638a9042750ddd831b50a19947/496787be427b2420-04/s1280x1920/tumblr_f19949638a9042750ddd831b50a19947_bc6da4ec_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/611c132fd6c12138f98fde18bd7a3012/890a1163b1c5bbec-e0/s1280x1920/tumblr_611c132fd6c12138f98fde18bd7a3012_908d01b7_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/f73267b8d0f18a86b8b8c03576c49661/5e6c846d37f0c0c7-aa/s500x750/tumblr_f73267b8d0f18a86b8b8c03576c49661_c20aa3f1_500.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/673aa6592e3fd80b0861f401dc4fd6c7/dd2bd9e2cec4f55d-12/s1280x1920/tumblr_673aa6592e3fd80b0861f401dc4fd6c7_b6b1cbb1_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/6f9756721dfc4eee36b0b6681ab600c7/f23b254c0765fa2e-56/s500x750/tumblr_6f9756721dfc4eee36b0b6681ab600c7_208f3efb_500.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/356a9f893b3471fdb8754388f47b2066/c3f06cf258da040a-f1/s250x400/tumblr_356a9f893b3471fdb8754388f47b2066_f66d0d81_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/c8722d7ca269ef18f92d79c9368f6a56/c3f06cf258da040a-77/s250x400/tumblr_c8722d7ca269ef18f92d79c9368f6a56_5748bf7b_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/128366eb3f340f1aa5026398caa14b06/c3f06cf258da040a-8a/s250x400/tumblr_128366eb3f340f1aa5026398caa14b06_f9bdff13_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/2f33ff8bbe400e88cc9623df170d4992/0496a75f23f6470b-cc/s540x810/tumblr_2f33ff8bbe400e88cc9623df170d4992_9d93ae02_540.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/42961a29477d0a5b1fa690d7641aa3f4/ff0b7f2dcd76c62b-d1/s500x750/tumblr_42961a29477d0a5b1fa690d7641aa3f4_a7363d6c_500.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/abf6139e9713afb01fdc0d907bc9135a/73fd9522f56c42b2-a7/s1280x1920/tumblr_abf6139e9713afb01fdc0d907bc9135a_7cd01a43_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/0ddcd538f0ef5c095e88bc5a36a440f7/9029c9baea29b254-28/s500x750/tumblr_0ddcd538f0ef5c095e88bc5a36a440f7_e16aab8d_500.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/d00f80b6290a7f055d9494df83a720e9/bb998b6cc7fdf08e-5f/s1280x1920/tumblr_d00f80b6290a7f055d9494df83a720e9_d06fe82c_1280.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/6bd71e878b5250a4aa51b1b533000f77/07b3f6aed215ff0c-fc/s400x600/tumblr_6bd71e878b5250a4aa51b1b533000f77_8b6ddb36_400.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/5b795ee79ae6d012834e4392d68b3669/07b3f6aed215ff0c-48/s400x600/tumblr_5b795ee79ae6d012834e4392d68b3669_f2bd5938_400.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/69ddc03aefdb6444edb7a6372638125d/07b3f6aed215ff0c-5d/s250x400/tumblr_69ddc03aefdb6444edb7a6372638125d_2d13d9c7_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/1841a611bfcd602b42945d5ea97a7496/b145eea44ea5d471-9c/s250x400/tumblr_1841a611bfcd602b42945d5ea97a7496_c794db20_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/10a058c7a0de2fe703a13ecae737bc45/b145eea44ea5d471-da/s250x400/tumblr_10a058c7a0de2fe703a13ecae737bc45_f5d45df8_250.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/421ac51f55796f5bf5803ccaf5482358/tumblr_pyk6eoSF5N1yp1mz1o3_640.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/58e41aabd4add78225641507cfd91689/tumblr_pyk6eoSF5N1yp1mz1o2_400.png" height=10% width=10%>
+<img src="../64.media.tumblr.com/7b78d4eba583fc058d50d4eb8ad72a01/tumblr_py16rosOrr1yp1mz1o2_250.png" height=10% width=10%>
+
+<p><img src="../64.media.tumblr.com/017dfe0f508a18a16e352ecb1bd93fa2/14c5917ee9ba7f9e-f9/s1280x1920/tumblr_017dfe0f508a18a16e352ecb1bd93fa2_e08cfb4e_1280.png" height=20% WIDTH=20%>
+<img src="../64.media.tumblr.com/349caf9c9335f63ad2b547654593fc43/23768fa59654eed7-3d/s1280x1920/tumblr_349caf9c9335f63ad2b547654593fc43_e229b571_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/fd76200200a138ad9cb0205293a5dbeb/6a915541a93d65cd-06/s1280x1920/tumblr_fd76200200a138ad9cb0205293a5dbeb_8d2fc8ae_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/94991d756181fe0e36e693493ac5395d/dd17ae6edc8de98b-ed/s1280x1920/tumblr_94991d756181fe0e36e693493ac5395d_2cdfc1d4_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/05efd6f90f178031526a832d3ce02a2d/8ed60dc43a36df34-9d/s640x960/tumblr_05efd6f90f178031526a832d3ce02a2d_6a60a80e_640.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/9a3022ba30bacea97c34c64582db4b2b/f77de59749eee7ef-a9/s1280x1920/tumblr_9a3022ba30bacea97c34c64582db4b2b_80eee980_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/9bfe4a0b0e3ffc3555e3682759719cf8/9e591c36b41ec895-06/s640x960/tumblr_9bfe4a0b0e3ffc3555e3682759719cf8_b3f66170_640.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/04783b219ed4c44701261fb3adc7f25a/52b66232a85d093f-2e/s1280x1920/tumblr_04783b219ed4c44701261fb3adc7f25a_13417d9b_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/4be65e31e73da8ed8dc81c6cc7681d1d/692d6ae975bf92d3-32/s540x810/tumblr_4be65e31e73da8ed8dc81c6cc7681d1d_a120c193_540.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/32de6f5e0d7f975ceaa763210b9190ff/2a71ea0ee263a111-45/s1280x1920/tumblr_32de6f5e0d7f975ceaa763210b9190ff_d435d3bb_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/60705ab72fc33c3ded8a87d11e8a68b7/7f485fbefe7446f9-f9/s640x960/tumblr_60705ab72fc33c3ded8a87d11e8a68b7_d282c30f_640.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/013b8700bf335c0e0a3f2e1fc70d245b/7278553179022800-d8/s1280x1920/tumblr_013b8700bf335c0e0a3f2e1fc70d245b_ab679ed2_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/a87aa3cc5ee0ec56a9b3475989290c6a/dc28faef626ca931-ff/s1280x1920/tumblr_a87aa3cc5ee0ec56a9b3475989290c6a_a818a686_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/60c939b63984445aa0d16bc31684c9f7/tumblr_4e5fd6a2a758d931565d077b12e99326_e07b1b6f_1280.png" height=20% width=20%>
+<img src="../64.media.tumblr.com/380fb12e4fc196ec361e98ff4ec3ab45/tumblr_pxis17yw391yp1mz1o1_640.png" height=20% width=20%>
+</p>
+
+  </body>
+</html>
